@@ -30,7 +30,7 @@ fn parse_file(lines: Vec<String>) -> Vec<Password> {
         let vals: Vec<&str> = l.split(',').collect();
 
         pws.push(Password {
-            name: vals[0].to_string(),
+            name: vals[0].to_string() + "/" + vals[3],
             username: vals[3].to_string(),
             password: vals[4].to_string(),
             url: vals[1].to_string(),
